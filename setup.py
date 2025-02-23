@@ -21,15 +21,16 @@ from setuptools.command.build import build
 
 class CustomBuild(build):
     sub_commands = [
-        ('build_ext',     build.has_ext_modules),
-        ('build_py',      build.has_pure_modules),
-        ('build_clib',    build.has_c_libraries),
-        ('build_scripts', build.has_scripts),
-                    ]
+        ('build_ext', lambda self: True),
+        ('build_py', lambda self: True),
+        ('build_clib', lambda self: True),
+        ('build_scripts', lambda self: True),
+    ]
+    
+module = Extension('_visilibity', swig_opts=['-c++'],
+                   sources=['visilibity.i', 'visilibity.cpp'],
+                   include_dirs=['.'])  # Assuming 'visilibity.hpp' is in the current directory
 
-module = Extension('_visilibity', swig_opts = ['-c++'],
-        sources = ['visilibity.i', 'visilibity.cpp'],
-        headers = ['visilibity.hpp'], include = ['visilibity.hpp'])
 
 setup (name = 'VisiLibity',
        version = '1.0.10',
