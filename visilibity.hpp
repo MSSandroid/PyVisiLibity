@@ -49,8 +49,6 @@ License along with VisiLibity.  If not, see <http://www.gnu.org/licenses/>.
 //Microsoft Visual Studio
 
 #include <limits>
-#define NAN std::numeric_limits<double>::quiet_NaN()
-#define INFINITY std::numeric_limits<double>::infinity()
 #define M_PI 3.141592653589793238462643
 #define and &&
 #define or ||
