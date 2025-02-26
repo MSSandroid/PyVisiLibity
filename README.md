@@ -15,6 +15,24 @@ To install the Python package:
 
 `pip install visilibity`
 
+### On Windows
+
+Make sure you have the buildtools installed:
+1. Download [Buildtools für Visual Studio 2022](https://aka.ms/vs/17/release/vs_BuildTools.exe)
+2. Select `C++ Tools for Linux Development` and install
+
+After that you need to install the `swig` and `cython`. When using conda just run 
+```
+conda install swig boost cython
+```
+
+Now you can install the package with
+```
+pip install .
+```
+
+4.
+
 ## Run test with example
 
 After installation, it would possible to run the test example `visilibity_test.py`.
