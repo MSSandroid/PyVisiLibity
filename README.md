@@ -31,8 +31,6 @@ Now you can install the package with
 pip install .
 ```
 
-4.
-
 ## Run test with example
 
 After installation, it would possible to run the test example `visilibity_test.py`.
